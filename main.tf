@@ -22,7 +22,7 @@ data "terraform_remote_state" "operations" {
   backend = "s3"
   config = {
     bucket = "terraform-operations"
-    key    = "terraform.tfstate"
+    key    = "${var.operations}/terraform.tfstate"
     region = "us-east-1"
   }
 }
