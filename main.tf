@@ -37,7 +37,7 @@ resource "aws_route53_zone" "app_zone" {
   name = "${var.name}.${local.hosted_zone.name}"
 
   tags = {
-    env = var.name
+    ops = var.name
   }
 }
 
